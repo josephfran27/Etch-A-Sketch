@@ -43,7 +43,7 @@ let colorChoice = 'black';
 //color div
 const colorDiv = document.createElement('div');
 colorDiv.id = 'color-div';
-document.body.append(colorDiv)
+mainContainer.append(colorDiv)
 
 //color label
 const colorLabel = document.createElement('p');
@@ -124,7 +124,7 @@ colorDiv.appendChild(clearBtn);
 //GRID
 const gridContainer = document.createElement('div');
 gridContainer.id = 'grid-container';
-document.body.appendChild(gridContainer);
+mainContainer.appendChild(gridContainer);
 
 //function for size input
 function adjustSize() {
