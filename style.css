@@ -19,11 +19,14 @@ body {
     width: 800px;
     height: 800px;
     margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;    /* allows multiple rows */
 }
 
-#grid-cell {
+.grid-cell {
     background-color: azure;
     border: solid #233142 1px;
-    height: 50px;
-    width: 50px;
+    flex: 0 0 calc(100% / 16);  /* creates exactly 16 cells per row */
+    aspect-ratio: 1 / 1;        /* creates perfect squares */
+    box-sizing: border-box;     /* protects layout */
 }

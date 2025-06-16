@@ -6,7 +6,10 @@ gridContainer.id = 'grid-container';
 document.body.appendChild(gridContainer);
 
 //grid cell
-const gridCell = document.createElement('div');
-gridCell.id = 'grid-cell';
-gridContainer.appendChild(gridCell);
+for (let i = 0; i < 16 * 16; i++) {
+    const gridCell = document.createElement('div');
+    gridCell.classList.add('grid-cell');
+    gridContainer.appendChild(gridCell);
+}
+
 
