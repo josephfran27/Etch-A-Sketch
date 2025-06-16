@@ -30,3 +30,17 @@ body {
     aspect-ratio: 1 / 1;        /* creates perfect squares */
     box-sizing: border-box;     /* protects layout */
 }
+
+#input-div {
+    color: #455d7a;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+#input-button {
+    font-family: 'Chewy', sans-serif;
+    color: #455d7a;
+}
