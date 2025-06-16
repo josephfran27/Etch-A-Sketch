@@ -7,7 +7,7 @@ document.body.appendChild(mainContainer);
 
 //HEADER
 const header = document.createElement('p');
-header.textContent = 'Etch-A-Sketch';
+header.textContent = '🎨Etch-A-Sketch🎨';
 header.id = 'main-header';
 mainContainer.appendChild(header);
 
@@ -28,7 +28,7 @@ inputButton.textContent = 'Apply';
 inputButton.addEventListener('click', adjustSize);
 inputBox.addEventListener('keydown', (event) => {
     if(event.key == 'Enter') {
-      adjustSize();
+        adjustSize();
     }
 });
 mainContainer.appendChild(inputDiv);
@@ -104,6 +104,22 @@ eraseBtn.addEventListener('click', () => {
     colorChoice = 'erase';
 });
 colorDiv.appendChild(eraseBtn);
+
+//clear grid
+const clearText = document.createElement('p');
+clearText.textContent = 'Click to clear grid: ';
+colorDiv.appendChild(clearText);
+//clear button
+const clearBtn = document.createElement('button');
+clearBtn.id = 'clear-button';
+clearBtn.textContent = 'Clear';
+clearBtn.addEventListener('click', () => {
+    const allCells = document.querySelectorAll('.grid-cell');
+    allCells.forEach(cell => {
+        cell.style.backgroundColor = 'azure';
+    });
+});
+colorDiv.appendChild(clearBtn);
 
 //GRID
 const gridContainer = document.createElement('div');
